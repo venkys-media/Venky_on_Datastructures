@@ -1,39 +1,21 @@
-class Node:
-    def __init__(self, data):
-        self.data = data
-        self.next = None
+class StudentNode:
+    def __init__(self, student_id, name, age):
+        self.student_id = student_id  # Student ID
+        self.name = name              # Student Name
+        self.age = age                # Student Age
+        self.next = None              # Pointer to the next node
 
-# Function to traverse the linked list
-def traverse(head):
-    temp = head
-    while temp:
-        print(temp.data, end=" -> ")
-        temp = temp.next
-    print("None")
+def main():
+    # Create the first node (head node)
+    head = StudentNode(1, "Alice", 20)
+    # Create the second node
+    second = StudentNode(2, "Bob", 22)
+    # Create the third node
+    third = StudentNode(3, "Charlie", 21)
+    head.next = second 
 
-# Function to insert a new node at the end
-def insert(head, data):
-    new_node = Node(data)
-    
-    if not head:
-        return new_node
-    
-    temp = head
-    while temp.next:
-        temp = temp.next
-    
-    temp.next = new_node
-    return head
+    # Link the first node to the second node
+    second.next = third 
 
 if __name__ == "__main__":
-    head = None
-
-    head = insert(head, 10)
-    head = insert(head, 20)
-    head = insert(head, 30)
-    head = insert(head, 50)
-    head = insert(head, 60)
-    head = insert(head, 70)
-
-    print("Linked list: ", end="")
-    traverse(head)
+    main()
