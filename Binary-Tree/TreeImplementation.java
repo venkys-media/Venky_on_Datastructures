@@ -25,6 +25,17 @@ class TreeImplementation {
         return node;
     }
 
+    // Function to search for a value in the tree
+    boolean search(Node node, int value) {
+        if (node == null) {
+            return false;
+        }
+        if (node.data == value) {
+            return true;
+        }
+        return search(node.left, value) || search(node.right, value);
+    }
+
     // Function for in-order traversal
     void inOrder(Node node) {
         if (node != null) {
