@@ -1,5 +1,5 @@
 
-# Delete First Node
+# Delete Specific Node
 
 **Page Number in Book**: 68
 

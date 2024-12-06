@@ -1,5 +1,5 @@
 
-# Delete First Node
+# Insert Specific Node
 
 **Page Number in Book**: 74
 
@@ -7,4 +7,4 @@
 
 
 ## QR Code
-![QR Code](./URL%20QR%20Code%20(12).png)
+![QR Code](./insertspecific.png)

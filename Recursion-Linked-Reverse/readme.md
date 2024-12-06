@@ -1,5 +1,5 @@
 
-# Queue Using Linked List
+# Reverse Linked List Using Recursion
 
 **Page Number in Book**: 112
 
@@ -8,4 +8,3 @@
 
 ## QR Code
 ![QR Code](./URL%20QR%20Code%20(17).png)
-
