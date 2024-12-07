@@ -1,4 +1,4 @@
-/* Copyrights to venkys.io
+/* All copyrights reserved by Venkys.io.
  Visit https://venkys.io for more information */
 
 // Java program for implementing Linked List Reversal

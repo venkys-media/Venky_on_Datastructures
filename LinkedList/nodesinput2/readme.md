@@ -9,17 +9,32 @@ The program demonstrates:
 - Traversing to the end to add new nodes
 - Printing the final linked list
 
+## Algorithm Steps
+1. Initialize head as null
+2. For each input:
+   - Create new node with input data
+   - If head is null, set head to new node
+   - Else traverse to end and link new node
+   - No need to maintain previous pointer
+
 ## Features
+- Simple traversal-based insertion
 - Takes number of nodes as input
 - Creates nodes dynamically
-- Adds each new node at the end
-- Traverses the list to find insertion point
-- Prints the final linked list
+- Maintains proper links
+- Prints the final list
 
-## Available in 3 Languages
-- Java (Main.java)
-- Python (nodesinput.py)
-- C++ (nodesinput.cpp)
+## Directory Structure
+```
+nodesinput2/
+├── cpp/
+│   └── nodesinput.cpp
+├── java/
+│   └── Main.java
+├── python/
+│   └── nodesinput.py
+└── readme.md
+```
 
 ## Complexity Analysis
 - Space Complexity: O(n) where n is number of nodes
