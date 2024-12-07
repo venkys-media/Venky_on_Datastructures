@@ -1,14 +1,14 @@
 /* Copyrights to venkys.io
  Visit https://venkys.io for more information */
 
-// C++ program for implementing Linked List with user input (Method 2)
-// This program demonstrates creation of linked list by traversing to the end
+// C++ program for implementing Linked List Reversal
+// This program demonstrates reversing a linked list iteratively
 
-// Space complexity: O(n)
+// Space complexity: O(1)
 // Time complexity:
 //|Operation    | Best Case | Average Case | Worst Case |
 //|-------------|-----------|--------------|------------|
-//|Insertion    | O(1)      | O(n)         | O(n)       |
+//|Reversal     | O(n)      | O(n)         | O(n)       |
 //|Traversal    | O(n)      | O(n)         | O(n)       |
 
 #include <iostream>
@@ -26,6 +26,23 @@ public:
     }
 };
 
+// Function to reverse the linked list
+Node* reverseList(Node* head) {
+    Node* current = head;
+    Node* prev = nullptr;
+    Node* next = nullptr;
+    
+    // traverse and reverse links
+    while (current != nullptr) {
+        next = current->next;    // Store the next node
+        current->next = prev;    // Reverse the current node's pointer
+        prev = current;          // Move prev to current
+        current = next;          // Move current to next
+    }
+    
+    return prev;  // New head of reversed list
+}
+
 // Function to print the linked list
 void printList(Node* head) {
     Node* temp = head;
@@ -38,33 +55,22 @@ void printList(Node* head) {
 
 // main function
 int main() {
-    Node* head = nullptr;  // head of the linked list
+    // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
+    Node* head = new Node(1);
+    head->next = new Node(2);
+    head->next->next = new Node(3);
+    head->next->next->next = new Node(4);
+    head->next->next->next->next = new Node(5);
 
-    // take number of nodes as input
-    std::cout << "Enter the number of nodes: ";
-    int n;
-    std::cin >> n;
+    // Print original list
+    std::cout << "Original Linked List:" << std::endl;
+    printList(head);
 
-    // create linked list with n nodes
-    for (int i = 0; i < n; ++i) {
-        std::cout << "Enter data for node " << (i + 1) << ": ";
-        int data;
-        std::cin >> data;
-        Node* newNode = new Node(data);
+    // Reverse the linked list
+    head = reverseList(head);
 
-        if (head == nullptr) {
-            head = newNode;  // First node becomes head
-        } else {
-            Node* temp = head;
-            while (temp->next != nullptr) {
-                temp = temp->next;  // Traverse to the last node
-            }
-            temp->next = newNode;   // Link new node at the end
-        }
-    }
-
-    // Print the linked list
-    std::cout << "\nThe linked list is:" << std::endl;
+    // Print reversed list
+    std::cout << "Reversed Linked List:" << std::endl;
     printList(head);
 
     // Clean up memory
@@ -78,9 +84,8 @@ int main() {
     return 0;
 }
 
-//Sample Input: 3
-//             10 20 30
-//Sample Output: 10 20 30
+//Sample Input: 1 -> 2 -> 3 -> 4 -> 5
+//Sample Output: 5 -> 4 -> 3 -> 2 -> 1
 
 /* Join our communities*/
 // Follow us on LinkedIn - https://www.linkedin.com/company/venkysio
