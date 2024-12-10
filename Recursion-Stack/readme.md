@@ -52,5 +52,5 @@ Recursion-Stack/
 - [Facebook](https://www.facebook.com/venkysio)
 - [Instagram](https://www.instagram.com/venkys.io)
 - [Twitter](https://twitter.com/iovenkys)
-- [Youtube](https://www.youtube.com/@venkysio)
+- [Youtube](https://www.youtube.com/@CoreCodersNetwork)
 
